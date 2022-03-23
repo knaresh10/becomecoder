@@ -1,0 +1,74 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+int main() {
+	// vector declaration
+	vector<int> ve;
+
+	// specifing no of values in vector at declaration
+	vector<int> vec(5); // here 5 can be any number(no of values u want to store in vector)
+
+	// specifing no of values and also default value at declaration
+	vector<int> vec1(5, 0); // here 5 is no of values and 0 is default value
+	// initialise values to the vector at declaration
+	vector<int> v = {1, 2, 3, 4, 5};
+
+	// inserting element into the vector
+	// push_back() add value to the vector at last
+	v.push_back(10);
+
+	// emplace_back() add value to the vector at last which is faster than push_back()
+	v.emplace_back(30);
+
+	// pop_back() is used to remove the last element of the vector
+	v.pop_back();
+
+	// begin() points the first value of vector
+	auto it = v.begin();
+	cout << *it << endl;
+
+	// end() points to the next value after the last value of vector
+	auto it1 = v.end() - 1;
+	cout << *it1 << endl;
+
+	// rbegin() points the last value of the vector
+	auto rit = v.rbegin();
+	cout << *rit << endl;
+
+	// rend() points to before value of first value of vector
+	auto rit1 = v.rend() - 1;
+	cout << *rit1 << endl;
+	// for range loop
+	for (int i = 0; i < v.size(); i++) cout << v[i] << " ";
+	cout << "\n";
+
+	// for loop to iterate a vector using iterator
+	for (auto it2 = v.begin(); it2 != v.end(); it2++) cout << *it2 << " ";
+	cout << "\n";
+
+	// for loop to iterate a vector using rbegin and rend iterators
+	for (auto it = v.rbegin(); it != v.rend(); it++) cout << *it << " ";
+	cout << "\n";
+
+	// for each loop
+	for (auto i : v) cout << i << " ";
+	cout << "\n";
+
+	// insert() is used in insert value to vector at specific position
+	// syntax ve.insert(ve.begin()+n,value) here n is no of positions from beginning of vector
+	v.insert(v.begin(), 300);
+	cout << "\n";
+
+	// syntax ve.insert(ve.begin()+n,times,value) here times is no of times the value has to insert
+	v.insert(v.begin() + 1, 2, 60);
+	vector<int> v1(3, 10); // {10,10,10}
+
+	// syntax ve.insert(ve.begin()+n,v.begin(),v.end()) this syntax is used to
+	v.insert(v.end() - 1, v1.begin(), v1.end());
+
+	// erase is used to remove element from particular location in vector
+	v.erase(v.begin() + 2);
+
+	// erase method can also be used to remove a range of values from vector
+	v.erase(v.begin(), v.begin() + 3);
+}
