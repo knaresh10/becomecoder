@@ -1,0 +1,47 @@
+#include<iostream>
+#include<vector>
+#include<algorithm>
+#include<utility>
+using namespace std;
+int main() {
+	vector<int> v = {13, 10, 12, 3, 10, 10, 18};
+	for (auto i : v) cout << i << " ";
+	cout << "\n";
+
+	// sort method is avaliable in algorithm header file
+	// to sort a arr we use the following syntax sort(arr,arr+n);
+	// to sort a vector any stl container we use the below syntax
+	sort(v.begin(), v.end());
+	for (auto i : v) cout << i << " ";
+	cout << "\n";
+
+
+	// pair
+	// pair is a stl container which is available in utility header file
+	// pair is used to store two values
+	// syntax of pair is == pair<datatype1,datatype2> variable;
+	pair<int, int> p = {1, 2};
+
+	// first is used to access the first value of pair and second is used to access the second value in pair
+	cout << p.first << " " << p.second << "\n";
+
+	// some times of pairs
+	pair<int, char> p1 = {1, 'a'};
+	cout << p1.first << " " << p1.second << "\n";
+
+	pair<int, string> p2 = {12, "besties"};
+	cout << p2.first << " " << p2.second << "\n";
+
+
+
+
+	//vector of pairs
+	vector<pair<int, int>> v1 = {{1, 2}, {3, 4}, {5, 6}};
+
+	// pushing a pair into the vector
+	v1.push_back({3, 12});
+
+	// to access elements of vector of pairs
+	for (auto it : v1)  cout << it.first << " " << it.second << endl;
+	cout << "\n";
+}
