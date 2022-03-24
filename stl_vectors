@@ -14,6 +14,10 @@ int main() {
 	sort(v.begin(), v.end());
 	for (auto i : v) cout << i << " ";
 	cout << "\n";
+	
+	
+	// sort the vector in reverse order
+	sort(v.begin(),v.end(),greater<int>);
 
 
 	// pair
