@@ -71,7 +71,7 @@ int main() {
 }
 ```
 
-##output:
+## output:
 
 >13
 ----
