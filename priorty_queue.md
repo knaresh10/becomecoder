@@ -70,6 +70,10 @@ int main() {
 	cout << var;
 }
 ```
+
+##output:
+
+>13
 ----
 ### to traverse the priority queue we use the following code
 
